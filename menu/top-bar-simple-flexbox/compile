@@ -1,0 +1,22 @@
+#! /usr/bin/env bash
+rm -rf site
+
+rm -rf site/css
+mkdir -p site/css
+
+rm -rf site/img
+mkdir site/img
+
+rm -rf site/js
+mkdir site/js
+
+
+cp ../../vendors/normalize/normalize.min.css site/css/normalize.min.css
+
+cp ../../img/papillon.jpg site/img/papillon.jpg
+
+
+sass style.sass > site/css/style.css
+jade index.jade --out site
+
+#tidy -i index.html

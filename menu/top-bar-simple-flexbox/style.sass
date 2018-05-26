@@ -1,0 +1,52 @@
+$gray: #C8C8C8
+$blue: #0080ff
+$red: #ff0000
+$yellow: #ffff00
+$orange: #ff8000
+$green: #00ff40
+
+$page-background-color: $gray
+
+$background-color: $blue
+$title-color: $red
+
+$link-color: $yellow
+$link-color-hover: $orange
+$background-color-hover: $green
+
+
+html, body
+   margin: 0
+   font: 1em "Open Sans", sans-serif
+   background: $page-background-color
+
+
+
+.menu-container
+   width: 100%
+   //max-width: 960px;
+   margin: 0
+   padding: 0
+   background-color: $background-color
+   display: flex
+   justify-content: space-between
+
+.menu-container nav ul
+   list-style-type: none
+   padding: 0
+   margin: 0
+   display: flex
+/**
+
+   .menu-container > nav a,form
+      text-decoration: none
+      color: $link-color
+      display: block
+      padding: 10px
+      text-align: center
+
+   .menu-container nav a:hover
+      color: $link-color-hover
+      background-color: $background-color-hover
+
+   */

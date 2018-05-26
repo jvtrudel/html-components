@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+# ajoute le repertoire bin à la liste PATH
+# pour utiliser ce script, exécutez avec la commande eval
+
+if [ ! -d "bin" ]; then
+   echo "Le repertoire \"bin\" n'a pas été trouvé."
+   exit 1
+fi
+
+echo "export PATH=$PATH:$(pwd)/bin"

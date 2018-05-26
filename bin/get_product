@@ -1,0 +1,38 @@
+#! /usr/bin/env bash
+
+# télécharge des trucs...
+
+# SYNOPSIS
+#   get_product produit
+
+known="normalize"
+
+
+if [ ! -d vendors ]; then
+   mkdir vendors
+fi
+
+if [ -z "$1" ]; then
+   echo "Vous devez demander un produit. Les produits connus sont:"
+   for i in $known
+   do
+      echo "  - $i"
+   done
+   exit 1
+fi
+
+
+if [ "$1" == "normalize" ]; then
+   rm -rf vendors/normalize
+   mkdir vendors/normalize
+   wget https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css -O vendors/normalize/normalize.css
+   minify vendors/normalize/normalize.css
+else
+   echo "Le produit \"$1\" n'est pas connu."
+   echo "Veuillez en choisir un dans la liste suivante:"
+   for i in $known
+   do
+      echo "  - $i"
+   done
+   exit 1
+fi
