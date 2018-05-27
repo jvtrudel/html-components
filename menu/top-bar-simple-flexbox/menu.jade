@@ -1,0 +1,13 @@
+mixin menu(items,courant)
+   .menu-container
+      .nav
+         ul
+            - var n=0
+            each item in items
+               if n==courant
+                  li.courant
+                     a(href=item.href)= item.text
+               else
+                  li
+                     a(href=item.href)= item.text
+               - n++

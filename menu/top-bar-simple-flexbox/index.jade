@@ -1,20 +1,33 @@
+include logo.jade
+include menu.jade
+include header.jade
+include data.jade
 doctype
 html(lang="fr")
    head
       meta(charset="utf-8")
+      meta(name="viewport",content="width=device-width, initial-scale=1.0")
       link(rel="stylesheet",href="css/normalize.min.css")
+      link(href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet")
       link(rel="stylesheet",href="css/style.css")
    body
+      +header("Le Super Blorg", "img/papillon.jpg",menuData,1)
       div
          nav
             ul
                li apropos
                li article
                li nous joindre
-         .menu-container
-            img(src="img/papillon.jpg")
-            nav
-               ul
-                  li apropos
-                  li article
-                  li nous joindre
+      .menu-container
+         .logo-container
+            img.logo(src="img/papillon.jpg")
+            .titre
+               p Le Super Blorg
+         nav
+            ul
+               li apropos
+               li article
+               li nous joindre
+      +logo("Le Super Blorg", "img/papillon.jpg" )
+      +logo("Le Super Blorg", "img/papillon.jpg" )
+      +menu(menuData,0)

@@ -1,0 +1,6 @@
+include logo.jade
+include menu.jade
+mixin header(logo_label,logo_image,refs,current_page)
+   #header-container
+      +logo(logo_label,logo_image)
+      +menu(refs,current_page)

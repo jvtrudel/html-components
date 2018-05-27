@@ -1,3 +1,18 @@
+$mobile-screen: 690px
+$tablet-screen: 995px
+$desktop-screen: 1440px
+
+
+$mobile: "only screen and (max-width:#{$mobile-screen}) and (orientation: portait)"
+$mobile-landscape: "only screen and (max-width:#{$mobile-screen}) and (orientation: landscape)"
+
+$tablet: "only screen and (min-width:#{$mobile-screen}) and (max-width: #{$tablet-screen}) and (orientation: portrait)"
+$tablet-landscape: "only screen and (min-width:#{$mobile-screen}) and (max-width: #{$tablet-screen}) and (orientation: landscape)"
+
+
+$desktop: "only screen and (min-width:#{$tablet-screen})"
+
+
 $gray: #C8C8C8
 $blue: #0080ff
 $red: #ff0000
@@ -15,27 +30,14 @@ $link-color-hover: $orange
 $background-color-hover: $green
 
 
+
 html, body
    margin: 0
    font: 1em "Open Sans", sans-serif
    background: $page-background-color
+   min-height: 5000px
 
 
-
-.menu-container
-   width: 100%
-   //max-width: 960px;
-   margin: 0
-   padding: 0
-   background-color: $background-color
-   display: flex
-   justify-content: space-between
-
-.menu-container nav ul
-   list-style-type: none
-   padding: 0
-   margin: 0
-   display: flex
 /**
 
    .menu-container > nav a,form
@@ -50,3 +52,7 @@ html, body
       background-color: $background-color-hover
 
    */
+
+@import "logo.sass"
+@import "menu.sass"
+@import "header.sass"
